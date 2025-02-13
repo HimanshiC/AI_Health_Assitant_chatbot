@@ -29,9 +29,10 @@ git clone https://github.com/HimanshiC/AI_Health_Assitant_chatbot.git
 *Install required dependencies:*
 pip install -r requirements.txt
 
-Download the Meditron-7B GGUF model file and place it in the project directory.
+Download the Meditron-7B GGUF model file and place it in the project directory:
+https://huggingface.co/TheBloke/meditron-7B-GGUF
 
-##**Running the Application**
+## **Running the Application**
 1. Start the Backend Server
 Run the Llama.cpp server:
 ./llama-server.exe -m ../../../models/meditron-7b.Q4_K_M.gguf --port 8000 --ctx-size 4096 --host 0.0.0.0    
@@ -43,7 +44,7 @@ streamlit run Healthcarebot.py
 Then, open your browser and go to http://localhost:8501
 
 
-###**Emergency Detection Keywords**
+### **Emergency Detection Keywords**
 The system detects urgent medical conditions, including:
 1. Heart attack
 2. Chest pain
@@ -52,38 +53,38 @@ The system detects urgent medical conditions, including:
 5. Unconsciousness
 
 **Medical Disclaimer**
--> This chatbot DOES NOT replace professional medical advice.
--> In case of a medical emergency, call your local emergency number immediately.
--> The system only provides general information based on available data.
+- This chatbot DOES NOT replace professional medical advice.
+- In case of a medical emergency, call your local emergency number immediately.
+- The system only provides general information based on available data.
 
-###**Key Functions**
+### **Key Functions**
 *query_meditron(user_input)*
-->Processes user queries
-->Detects emergency situations
-->Responds to medical questions
-->Assists with appointment-related queries
+- Processes user queries
+- Detects emergency situations
+- Responds to medical questions
+- Assists with appointment-related queries
 *clean_response(response_text)*
-Formats model-generated responses
-Removes duplicates
-Limits response length for clarity
+- Formats model-generated responses
+- Removes duplicates
+- Limits response length for clarity
  
- ##**Usage Examples**
+ ## **Usage Examples**
 
-# Example: General medical query
+### Example: General medical query
 "What are the symptoms of diabetes?"
 "How to reduce fever?"
 
-# Example: Emergency detection
+### Example: Emergency detection
 "I'm experiencing severe chest pain"
 "My friend is having a heart attack"
 
-# Example: Appointment scheduling
+### Example: Appointment scheduling
 "I need to book a doctor’s appointment"
 "Schedule me a visit to doctor"
 
-##**Limitations**
-This is not a diagnostic tool 
-It has Keyword-based emergency detection and may not catch all emergencies.
-System performance depends on available RAM & processing power.
-Limited response length – avoids excessive outputs.
-Model specific limitations
+## **Limitations**
+- This is not a diagnostic tool 
+- It has Keyword-based emergency detection and may not catch all emergencies.
+- System performance depends on available RAM & processing power.
+- Limited response length – avoids excessive outputs.
+- Model specific limitations
